@@ -114,7 +114,7 @@ These functions wrap a http.Handler with some additonal features.
 ``` go
 func Composer(mws ...Middleware) Middleware
 ```
-Composer returns a new middleware which is composed by passed middlewares.
+Composer returns a new middleware which is composed of passed middlewares.
 It is just a partially applied function of `Compose` .
 
 
