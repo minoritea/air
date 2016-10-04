@@ -84,7 +84,7 @@ func Compose(h http.Handler, mws ...Middleware) http.Handler {
 	return h
 }
 
-// Composer returns a new middleware which is composed by passed middlewares.
+// Composer returns a new middleware which is composed of passed middlewares.
 // It is just a partially applied function of `Compose` .
 func Composer(mws ...Middleware) Middleware {
 	return func(h http.Handler) http.Handler {
