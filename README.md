@@ -98,10 +98,10 @@ These functions wrap a http.Handler with some additonal features.
 
 
 	func middleware(next http.Handler) http.Handler {
-	    return http.HandlerFunc(w http.ResponseWriter, r *http.Request) {
+	    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 	        // some additional features...
 	        next(w, r)
-	    }
+	    })
 	}
 
 
