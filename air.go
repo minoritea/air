@@ -25,7 +25,7 @@ func New() *Router {
 type handlerWrap struct{ http.Handler }
 
 func (hw *handlerWrap) handle(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	r = r.WithContext(context.WithValue(r.Context(), "", params))
+	r = r.WithContext(context.WithValue(r.Context(), ParamsKey, params))
 	hw.Handler.ServeHTTP(w, r)
 }
 
